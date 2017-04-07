@@ -34,8 +34,7 @@ public class MainActivity
     
     private static final long REP_DELAY = 100;
     Handler mTempRunawayHandler = new Handler();
-    //Handler mReactorTempHandler = new Handler();
-    
+    Handler mReactorTempHandler = new Handler();
     boolean mAutoIncrement = false;
     
     Animation mFlash;
@@ -60,7 +59,7 @@ public class MainActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         loadUI();
-        mReactorTempHandler.post(new MainRunnable());
+     
     }
     
     void loadUI() {
@@ -226,10 +225,5 @@ public class MainActivity
             }
         }
     }
-    private class MainRunnable implements Runnable{
-        
-        @Override public void run() {
-            reactorTemp.setText(String.valueOf(mShowReactorTemp));
-        }
-    }
+
 }
