@@ -34,7 +34,7 @@ public class MainActivity
     
     private static final long REP_DELAY = 100;
     Handler mTempRunawayHandler = new Handler();
-    //Handler mReactorTempHandler = new Handler();
+    Handler mReactorTempHandler = new Handler();
     
     boolean mAutoIncrement = false;
     
